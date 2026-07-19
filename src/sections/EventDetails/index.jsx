@@ -3,7 +3,7 @@ import MapCard from './MapCard'
 
 export default function EventDetails() {
   return (
-    <section className="event-details-section min-h-screen w-full flex items-center justify-center bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(251,246,240,1))] px-5 sm:px-8">
+    <section className="event-details-section min-h-screen w-full flex items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(248,236,224,0.95),_rgba(255,250,245,0.95),_rgba(242,229,214,0.98))] px-5 sm:px-8 pt-16 pb-16">
       <div className="details-grid grid w-full max-w-[1200px] gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="details-panel rounded-[32px] border border-[#235aa611] bg-white/95 p-10 shadow-[0_20px_44px_rgba(35,90,166,0.08)]">
           <span className="section-label inline-block text-xs uppercase tracking-[0.2em] text-[#235aa6] opacity-80 mb-4">
