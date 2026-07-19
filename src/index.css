@@ -4,6 +4,16 @@
 
 :root {
   color-scheme: light;
+  --bg: #fff8f2;
+  --surface: #ffffff;
+  --surface-soft: #f8f2eb;
+  --primary: #235aa6;
+  --primary-soft: #7ea7e0;
+  --warm: #d29b75;
+  --text: #19263c;
+  --muted: #5f6a85;
+  --border: rgba(35, 90, 166, 0.12);
+  --shadow: rgba(35, 90, 166, 0.16);
 }
 
 * {
@@ -21,8 +31,8 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: 'Playfair Display', serif;
-  color: #19263c;
-  background: #fffefb;
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 

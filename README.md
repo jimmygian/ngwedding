@@ -11,6 +11,11 @@ npm run dev
 
 Open the URL printed by Vite (typically `http://localhost:5173`).
 
+Deployment:
+- This project can be hosted on Netlify with the provided `netlify.toml`.
+- Build command: `npm run build`
+- Publish directory: `dist`
+
 Notes:
 - The design uses the Google Fonts `Allura`, `Playfair Display`, and `Prata` to approximate the script and serif styles from the image.
 - The original image is in `reference/theme.jpeg`; feel free to replace or crop it if you prefer an illustration-only logo.
