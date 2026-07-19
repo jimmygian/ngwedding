@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Playfair Display', serif;
+  color: #19263c;
+  background: #fffefb;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Angella White';
+  src: url('/assets/angella_white/angella_white.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Carlinet';
+  src: url('/assets/Carlinet.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delmon Delicate';
+  src: url('/assets/Delmon Delicate Script.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Greatlove';
+  src: url('/assets/greatlove/Greatlove.woff2') format('woff2'),
+    url('/assets/greatlove/Greatlove.woff') format('woff'),
+    url('/assets/greatlove/Greatlove.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moranga';
+  src: url('/assets/moranga/fonnts.com-moranga-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.save-font {
+  font-family: 'Delmon Delicate', 'Prata', serif;
+}
+
+.info-font {
+  font-family: 'Moranga', 'Playfair Display', serif;
+}
+
+.follow-font {
+  font-family: 'Allura', cursive;
+}
+
+.name {
+  position: absolute;
+  margin: 0;
+  font-family: 'Angella White', 'Greatlove', 'Carlinet', 'Playlist Script', cursive;
+  font-weight: 400;
+  font-size: min(clamp(110px, 20vw, 168px), 22vh);
+  line-height: 0.82;
+  color: #235aa6;
+  letter-spacing: -0.025em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: font-size 220ms ease;
+}
+
+.left {
+  left: clamp(4%, 8%, 12%);
+  top: 10%;
+  transform: rotate(-11deg);
+}
+
+.right {
+  right: clamp(4%, 8%, 12%);
+  bottom: 8%;
+  transform: rotate(5deg);
+}
+
+.and {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translateX(-50%);
+  font-family: 'Angella White', 'Delmon Delicate', 'Carlinet', 'Prata', serif;
+  font-size: 56px;
+  line-height: 0.85;
+}

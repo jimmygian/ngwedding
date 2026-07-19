@@ -1,6 +1,7 @@
 {
   "name": "yasmin-niko-wedding",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -12,6 +13,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.4.21"
   }
 }
