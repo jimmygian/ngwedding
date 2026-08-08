@@ -116,15 +116,28 @@ export default function HeroSection() {
               </a>
             </span>
           </div>
-          <img
-            src={partyImage}
-            alt="Wedding Party Sketch"
-            className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
-            style={{
-              transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
-              willChange: 'transform'
-            }}
-          />
+          <div className="relative">
+            <img
+              src={partyImage}
+              alt="Wedding Party Sketch"
+              className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
+              style={{
+                transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
+                willChange: 'transform'
+              }}
+            />
+            <img
+              src="/assets/pics/download_3.svg"
+              alt="Decorative sketch"
+              className="absolute pointer-events-none"
+              style={{
+                width: '45px',
+                bottom: '5px',
+                right: '-10px',
+                opacity: 0.75
+              }}
+            />
+          </div>
         </div>
 
         {/* RSVP Link */}
