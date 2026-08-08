@@ -1,6 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Amiri:ital,wght@0,400;1,400&display=block');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes float-pulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.05);
+  }
+}
+
+.animate-party {
+  animation: float-pulse 5s ease-in-out infinite;
+}
+
+@keyframes throwBouquet {
+  0% {
+    transform: translate(60vw, -80vh) rotate(360deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(-15deg);
+    opacity: 1;
+  }
+}
+
+.bouquet-throw {
+  animation: throwBouquet 3s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+  transform-origin: center;
+  z-index: 30;
+}
 
 :root {
   color-scheme: light;
@@ -36,9 +71,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-color: var(--bg);
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.2'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 0% 0%, rgba(210, 155, 117, 0.35) 0%, rgba(210, 155, 117, 0) 50%),
+    radial-gradient(circle at 100% 0%, rgba(126, 167, 224, 0.35) 0%, rgba(126, 167, 224, 0) 50%),
+    radial-gradient(circle at 100% 100%, rgba(210, 155, 117, 0.25) 0%, rgba(210, 155, 117, 0) 50%),
+    radial-gradient(circle at 0% 100%, rgba(126, 167, 224, 0.25) 0%, rgba(126, 167, 224, 0) 50%);
+}
+
 @font-face {
   font-family: 'Angella White';
-  src: url('/assets/angella_white/angella_white.ttf') format('opentype');
+  src: url('/assets/fonts/angella_white/angella_white.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -46,7 +94,7 @@ body {
 
 @font-face {
   font-family: 'Carlinet';
-  src: url('/assets/Carlinet.otf') format('opentype');
+  src: url('/assets/fonts/Carlinet.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -54,7 +102,7 @@ body {
 
 @font-face {
   font-family: 'Delmon Delicate';
-  src: url('/assets/Delmon Delicate Script.otf') format('opentype');
+  src: url('/assets/fonts/Delmon Delicate Script.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -62,9 +110,9 @@ body {
 
 @font-face {
   font-family: 'Greatlove';
-  src: url('/assets/greatlove/Greatlove.woff2') format('woff2'),
-    url('/assets/greatlove/Greatlove.woff') format('woff'),
-    url('/assets/greatlove/Greatlove.ttf') format('truetype');
+  src: url('/assets/fonts/greatlove/Greatlove.woff2') format('woff2'),
+    url('/assets/fonts/greatlove/Greatlove.woff') format('woff'),
+    url('/assets/fonts/greatlove/Greatlove.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -72,7 +120,39 @@ body {
 
 @font-face {
   font-family: 'Moranga';
-  src: url('/assets/moranga/fonnts.com-moranga-regular.otf') format('opentype');
+  src: url('/assets/fonts/moranga/fonnts.com-moranga-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Transcity';
+  src: url('/assets/fonts/Transcity.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Courgette';
+  src: url('/assets/fonts/Courgette,Great_Vibes,Lavishly_Yours,Miss_Fajardose/Courgette/Courgette-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Miss Fajardose';
+  src: url('/assets/fonts/Courgette,Great_Vibes,Lavishly_Yours,Miss_Fajardose/Miss_Fajardose/MissFajardose-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sisterhood';
+  src: url('/assets/fonts/Sisterhood PersonalUseOnly.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -90,38 +170,19 @@ body {
   font-family: 'Allura', cursive;
 }
 
+.and-font {
+  font-family: 'Delmon Delicate', cursive !important;
+}
+
 .name {
-  position: absolute;
   margin: 0;
-  font-family: 'Angella White', 'Greatlove', 'Carlinet', 'Playlist Script', cursive;
-  font-weight: 400;
-  font-size: min(clamp(110px, 20vw, 168px), 22vh);
+  font-family: 'Delmon Delicate', 'Angella White', 'Playlist Script', cursive;
+  font-weight: 700;
+  font-size: min(clamp(24px, 5vw, 64px), 8vh);
   line-height: 0.82;
-  color: #235aa6;
+  color: #941830;
   letter-spacing: -0.025em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: font-size 220ms ease;
-}
-
-.left {
-  left: clamp(4%, 8%, 12%);
-  top: 10%;
-  transform: rotate(-11deg);
-}
-
-.right {
-  right: clamp(4%, 8%, 12%);
-  bottom: 8%;
-  transform: rotate(5deg);
-}
-
-.and {
-  position: absolute;
-  left: 50%;
-  top: 42%;
-  transform: translateX(-50%);
-  font-family: 'Angella White', 'Delmon Delicate', 'Carlinet', 'Prata', serif;
-  font-size: 56px;
-  line-height: 0.85;
 }
