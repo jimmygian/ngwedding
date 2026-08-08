@@ -131,7 +131,7 @@ export default function HeroSection() {
               alt="Decorative sketch"
               className="absolute pointer-events-none"
               style={{
-                width: '45px',
+                width: '68px',
                 bottom: '5px',
                 right: '-10px',
                 opacity: 0.75
