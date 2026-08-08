@@ -146,17 +146,6 @@ export default function HeroSection() {
             >
               RSVP until <span style={{ fontFamily: '"Playfair Display", serif' }}>1</span> September
             </a>
-
-            <img
-              src="/assets/pics/bouquet_no_bg.png"
-              alt="Bouquet"
-              className="absolute bouquet-throw drop-shadow-md pointer-events-none"
-              style={{
-                width: '100px',
-                top: '-35px',
-                right: '-60px'
-              }}
-            />
           </div>
         </div>
 
