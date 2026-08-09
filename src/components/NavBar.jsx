@@ -38,7 +38,6 @@ export default function NavBar() {
         {/* Centered Menu */}
         <div className="flex gap-6 sm:gap-12 text-2xl sm:text-3xl capitalize tracking-normal" style={{ color: '#8b0000', fontFamily: "'Delmon Delicate', 'Angella White', 'Playlist Script', cursive" }}>
           <button onClick={() => scrollTo('schedule')} className="hover:opacity-60 transition-opacity">Schedule</button>
-          <button onClick={() => scrollTo('rsvp')} className="hover:opacity-60 transition-opacity">RSVP</button>
           <button onClick={() => scrollTo('gifts')} className="hover:opacity-60 transition-opacity">Gifts</button>
         </div>
       </div>

@@ -169,6 +169,24 @@ export default function HeroSection() {
                 SAKA Psychiko
               </a>
             </span>
+            <div className="flex justify-end mt-2">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block px-4 py-1.5 text-sm sm:text-base tracking-wide transition-all duration-300 hover:scale-105 hover:opacity-80 relative z-10"
+                style={{
+                  color: '#8b0000',
+                  fontFamily: '"Cormorant Garamond", serif',
+                  border: '1px solid #8b0000',
+                  borderRadius: '4px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                  textDecoration: 'none'
+                }}
+              >
+                RSVP until <span style={{ fontFamily: '"Playfair Display", serif' }}>1</span> September
+              </a>
+            </div>
           </div>
           <div
             key={`disco-${discoKey}`}
@@ -185,28 +203,6 @@ export default function HeroSection() {
                 willChange: 'transform'
               }}
             />
-          </div>
-        </div>
-
-        {/* RSVP Link */}
-        <div id="rsvp" className="w-full flex flex-col justify-center items-center mt-8 sm:mt-12 z-20 pb-16 pt-8">
-          <div className="relative inline-block">
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block px-8 py-3 text-lg sm:text-xl font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:opacity-80 relative z-10"
-              style={{
-                color: '#8b0000',
-                fontFamily: '"Cormorant Garamond", serif',
-                border: '1px solid #8b0000',
-                borderRadius: '4px',
-                backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                textDecoration: 'none'
-              }}
-            >
-              RSVP until <span style={{ fontFamily: '"Playfair Display", serif' }}>1</span> September
-            </a>
           </div>
         </div>
 
