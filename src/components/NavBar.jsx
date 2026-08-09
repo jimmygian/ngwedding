@@ -34,18 +34,10 @@ export default function NavBar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-3 bg-orange-50/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'}`}
       style={{ fontFamily: '"Cormorant Garamond", serif' }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        <div 
-          className="text-2xl sm:text-3xl font-bold cursor-pointer" 
-          style={{ color: '#8b0000' }}
-          onClick={() => scrollTo('home')}
-        >
-          Y & N
-        </div>
-        {/* Desktop Menu */}
-        <div className="hidden sm:flex gap-6 md:gap-8 text-lg md:text-xl font-medium" style={{ color: '#8b0000' }}>
-          <button onClick={() => scrollTo('schedule')} className="hover:opacity-60 transition-opacity">Schedule</button>
-          <button onClick={() => scrollTo('dress-code')} className="hover:opacity-60 transition-opacity">Dress Code</button>
+      <div className="max-w-6xl mx-auto px-6 flex justify-center items-center">
+        {/* Centered Menu */}
+        <div className="flex gap-6 sm:gap-12 text-lg sm:text-xl font-bold" style={{ color: '#8b0000' }}>
+          <button onClick={() => scrollTo('schedule')} className="hover:opacity-60 transition-opacity">Schedule & Q&A</button>
           <button onClick={() => scrollTo('gifts')} className="hover:opacity-60 transition-opacity">Gifts</button>
           <button onClick={() => scrollTo('rsvp')} className="hover:opacity-60 transition-opacity">RSVP</button>
         </div>

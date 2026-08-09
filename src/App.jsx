@@ -29,9 +29,7 @@ export default function App() {
           <h2 className="text-4xl font-bold" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif' }}>Schedule</h2>
         </div>
         
-        <div id="dress-code" className="min-h-screen flex items-center justify-center relative z-10">
-          <h2 className="text-4xl font-bold" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif' }}>Dress Code</h2>
-        </div>
+
 
         <div id="gifts" className="min-h-screen flex items-center justify-center relative z-10">
           <h2 className="text-4xl font-bold" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif' }}>Gifts</h2>
