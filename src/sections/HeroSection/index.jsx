@@ -5,6 +5,13 @@ import partyImage from '../../../assets/pics/party_sketch.png'
 
 export default function HeroSection() {
   const [scrollOffset, setScrollOffset] = useState(0);
+  const [clinkKey, setClinkKey] = useState(0);
+  const [tableKey, setTableKey] = useState(0);
+  const [discoKey, setDiscoKey] = useState(0);
+
+  const triggerClink = () => setClinkKey(prev => prev + 1);
+  const triggerTable = () => setTableKey(prev => prev + 1);
+  const triggerDisco = () => setDiscoKey(prev => prev + 1);
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -62,9 +69,12 @@ export default function HeroSection() {
         {/* Date and Event Details */}
         <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-8 sm:-mt-16 opacity-90" style={{ zIndex: 10 }}>
           <img
+            key={`table-${tableKey}`}
             src={tableImage}
             alt="Wedding Table Sketch"
-            className="w-56 h-56 sm:w-72 sm:h-72 object-contain mix-blend-multiply"
+            className="w-56 h-56 sm:w-72 sm:h-72 object-contain mix-blend-multiply cursor-pointer animate-jiggle"
+            onMouseEnter={triggerTable}
+            onTouchStart={triggerTable}
           />
           <div className="flex flex-col text-left justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
             <span style={{ fontWeight: 600, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', marginBottom: '8px' }}>
@@ -102,13 +112,20 @@ export default function HeroSection() {
         {/* Party Details */}
         <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-4 sm:-mt-8 opacity-90" style={{ zIndex: 10 }}>
           <div className="relative flex flex-col text-right justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
-            <div className="absolute pointer-events-none" style={{ width: '68px', height: '100px', top: '-30px', left: '-60px', opacity: 0.75 }}>
+            <div 
+              className="absolute pointer-events-auto cursor-pointer" 
+              style={{ width: '85px', height: '125px', top: '-40px', left: '-75px', opacity: 0.75 }}
+              onMouseEnter={triggerClink}
+              onTouchStart={triggerClink}
+            >
               <img
+                key={`left-${clinkKey}`}
                 src="/assets/pics/download_3.svg"
                 alt="Decorative sketch left"
                 className="absolute w-full h-full glass-left"
               />
               <img
+                key={`right-${clinkKey}`}
                 src="/assets/pics/download_3.svg"
                 alt="Decorative sketch right"
                 className="absolute w-full h-full glass-right"
@@ -128,15 +145,22 @@ export default function HeroSection() {
               </a>
             </span>
           </div>
-          <img
-            src={partyImage}
-            alt="Wedding Party Sketch"
-            className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
-            style={{
-              transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
-              willChange: 'transform'
-            }}
-          />
+          <div
+            key={`disco-${discoKey}`}
+            className="cursor-pointer animate-jiggle"
+            onMouseEnter={triggerDisco}
+            onTouchStart={triggerDisco}
+          >
+            <img
+              src={partyImage}
+              alt="Wedding Party Sketch"
+              className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
+              style={{
+                transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
+                willChange: 'transform'
+              }}
+            />
+          </div>
         </div>
 
         {/* RSVP Link */}
