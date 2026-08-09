@@ -23,6 +23,7 @@ export default function HeroSection() {
   const [scrollOffset, setScrollOffset] = useState(0);
   const [clinkKey, setClinkKey] = useState(0);
   const [discoKey, setDiscoKey] = useState(0);
+  const [lightsOn, setLightsOn] = useState(false);
 
   const triggerClink = () => setClinkKey(prev => prev + 1);
   const triggerDisco = () => setDiscoKey(prev => prev + 1);

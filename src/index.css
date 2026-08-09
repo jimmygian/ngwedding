@@ -62,6 +62,21 @@
   animation: flicker 4s infinite ease-in-out;
 }
 
+@keyframes turn-on-flicker {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  15% { opacity: 0.3; }
+  30% { opacity: 1; }
+  40% { opacity: 0.1; }
+  60% { opacity: 1; }
+  70% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.animate-turn-on {
+  animation: turn-on-flicker 1.2s ease-out forwards;
+}
+
 .table-light {
   position: absolute;
   width: 3px;
