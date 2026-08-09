@@ -32,7 +32,7 @@ export default function NavBar() {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-3 bg-[#fdfaf6]/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'}`}
-      style={{ fontFamily: '"Delmon Delicate", "Playfair Display", serif' }}
+      style={{ fontFamily: '"Montserrat", sans-serif' }}
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-center items-center">
         {/* Centered Menu */}
