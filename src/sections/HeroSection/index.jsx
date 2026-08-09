@@ -3,10 +3,25 @@ import heartImage from '../../../assets/pics/682154674854931704.png'
 import tableImage from '../../../assets/pics/table_sketch_vector.svg'
 import partyImage from '../../../assets/pics/party_sketch.png'
 
+const tableLights = [
+  { left: '15%', top: '35%', delay: '0s' },
+  { left: '21%', top: '34%', delay: '0.4s' },
+  { left: '27%', top: '36%', delay: '1.2s' },
+  { left: '33%', top: '36%', delay: '0.2s' },
+  { left: '39%', top: '37%', delay: '0.9s' },
+  { left: '45%', top: '38%', delay: '0.6s' },
+  { left: '50%', top: '38%', delay: '1.5s' },
+  { left: '56%', top: '38%', delay: '0.1s' },
+  { left: '62%', top: '37%', delay: '0.8s' },
+  { left: '68%', top: '36%', delay: '1.3s' },
+  { left: '74%', top: '36%', delay: '0.5s' },
+  { left: '80%', top: '35%', delay: '1.1s' },
+  { left: '86%', top: '34%', delay: '0.3s' },
+];
+
 export default function HeroSection() {
   const [scrollOffset, setScrollOffset] = useState(0);
   const [clinkKey, setClinkKey] = useState(0);
-  const [lightsOn, setLightsOn] = useState(false);
   const [discoKey, setDiscoKey] = useState(0);
 
   const triggerClink = () => setClinkKey(prev => prev + 1);
@@ -67,25 +82,20 @@ export default function HeroSection() {
 
         {/* Date and Event Details */}
         <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-8 sm:-mt-16 opacity-90" style={{ zIndex: 10 }}>
-          <div 
-            className="relative cursor-pointer"
-            onMouseEnter={() => setLightsOn(true)}
-            onMouseLeave={() => setLightsOn(false)}
-            onClick={() => setLightsOn(prev => !prev)}
-            style={{ width: 'fit-content' }}
-          >
+          <div className="relative" style={{ width: 'fit-content' }}>
             <img
               src={tableImage}
               alt="Wedding Table Sketch"
-              className="w-56 h-56 sm:w-72 sm:h-72 object-contain mix-blend-multiply transition-opacity duration-300"
+              className="w-56 h-56 sm:w-72 sm:h-72 object-contain mix-blend-multiply"
             />
-            <div 
-              className="absolute inset-0 pointer-events-none transition-opacity duration-500" 
-              style={{ opacity: lightsOn ? 1 : 0 }}
-            >
-              <div className="table-light animate-flicker" style={{ top: '34%', left: '26%' }} />
-              <div className="table-light animate-flicker" style={{ top: '37%', left: '50%', animationDelay: '0.3s' }} />
-              <div className="table-light animate-flicker" style={{ top: '35%', left: '74%', animationDelay: '0.7s' }} />
+            <div className="absolute inset-0 pointer-events-none opacity-100">
+              {tableLights.map((light, i) => (
+                <div 
+                  key={i} 
+                  className="table-light animate-flicker" 
+                  style={{ top: light.top, left: light.left, animationDelay: light.delay }} 
+                />
+              ))}
             </div>
           </div>
           <div className="flex flex-col text-left justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
