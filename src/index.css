@@ -18,24 +18,24 @@
 }
 
 @keyframes clink-left {
-  0%, 100% { transform: rotate(-5deg) translateX(-2px); }
-  50% { transform: rotate(8deg) translateX(4px); }
+  0% { transform: rotate(-5deg) translateX(-2px); }
+  100% { transform: rotate(2deg) translateX(1px); }
 }
 
 @keyframes clink-right {
-  0%, 100% { transform: rotate(5deg) translateX(2px); }
-  50% { transform: rotate(-8deg) translateX(-4px); }
+  0% { transform: rotate(5deg) translateX(2px); }
+  100% { transform: rotate(-2deg) translateX(-1px); }
 }
 
 .glass-left {
   clip-path: inset(0 50% 0 0);
-  animation: clink-left 2s ease-in-out infinite;
+  animation: clink-left 1.5s ease-out forwards;
   transform-origin: bottom right;
 }
 
 .glass-right {
   clip-path: inset(0 0 0 50%);
-  animation: clink-right 2s ease-in-out infinite;
+  animation: clink-right 1.5s ease-out forwards;
   transform-origin: bottom left;
 }
 
