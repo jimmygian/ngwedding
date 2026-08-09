@@ -101,7 +101,18 @@ export default function HeroSection() {
 
         {/* Party Details */}
         <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-4 sm:-mt-8 opacity-90" style={{ zIndex: 10 }}>
-          <div className="flex flex-col text-right justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
+          <div className="relative flex flex-col text-right justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
+            <img
+              src="/assets/pics/download_3.svg"
+              alt="Decorative sketch"
+              className="absolute pointer-events-none"
+              style={{
+                width: '68px',
+                top: '-30px',
+                left: '-60px',
+                opacity: 0.75
+              }}
+            />
             <span style={{ fontWeight: 600, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', marginBottom: '8px' }}>
               10 October 2026
             </span>
@@ -116,28 +127,15 @@ export default function HeroSection() {
               </a>
             </span>
           </div>
-          <div className="relative">
-            <img
-              src={partyImage}
-              alt="Wedding Party Sketch"
-              className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
-              style={{
-                transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
-                willChange: 'transform'
-              }}
-            />
-            <img
-              src="/assets/pics/download_3.svg"
-              alt="Decorative sketch"
-              className="absolute pointer-events-none"
-              style={{
-                width: '68px',
-                bottom: '5px',
-                right: '-10px',
-                opacity: 0.75
-              }}
-            />
-          </div>
+          <img
+            src={partyImage}
+            alt="Wedding Party Sketch"
+            className="w-40 h-40 sm:w-56 sm:h-56 object-contain transition-transform duration-75"
+            style={{
+              transform: `rotate(90deg) translateY(${-Math.abs(scrollOffset) * 0.5}px) scale(${1 + Math.abs(scrollOffset) * 0.002})`,
+              willChange: 'transform'
+            }}
+          />
         </div>
 
         {/* RSVP Link */}
