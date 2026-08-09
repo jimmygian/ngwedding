@@ -137,25 +137,6 @@ export default function HeroSection() {
         {/* Party Details */}
         <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-4 sm:-mt-8 opacity-90" style={{ zIndex: 10 }}>
           <div className="relative flex flex-col text-right justify-center" style={{ color: '#8b0000', fontFamily: '"Cormorant Garamond", serif', lineHeight: 1.3 }}>
-            <div 
-              className="absolute pointer-events-auto cursor-pointer" 
-              style={{ width: '85px', height: '125px', top: '-40px', left: '-75px', opacity: 0.75 }}
-              onMouseEnter={triggerClink}
-              onTouchStart={triggerClink}
-            >
-              <img
-                key={`left-${clinkKey}`}
-                src="/assets/pics/download_3.svg"
-                alt="Decorative sketch left"
-                className="absolute w-full h-full glass-left"
-              />
-              <img
-                key={`right-${clinkKey}`}
-                src="/assets/pics/download_3.svg"
-                alt="Decorative sketch right"
-                className="absolute w-full h-full glass-right"
-              />
-            </div>
             <span style={{ fontWeight: 600, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', marginBottom: '8px' }}>
               10 October 2026
             </span>

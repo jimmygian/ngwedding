@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import glassesSketch from '../../assets/pics/download_3.svg';
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const [clinkKey, setClinkKey] = useState(0);
+
+  const triggerClink = () => setClinkKey(prev => prev + 1);
+
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -13,11 +18,17 @@ export default function NavBar() {
     window.addEventListener('scroll', handleScroll, true);
     // Initial check
     handleScroll({ target: document.querySelector('.page') || document.documentElement });
-    return () => window.removeEventListener('scroll', handleScroll, true);
+    
+    // Initial clink on load
+    const timer = setTimeout(triggerClink, 500);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true);
+      clearTimeout(timer);
+    };
   }, []);
 
   const scrollTo = (id) => {
-    // If the scroll container is .page, we scroll inside it, else fallback
     const container = document.querySelector('.page');
     const el = document.getElementById(id);
     if (el) {
@@ -36,8 +47,30 @@ export default function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-center items-center">
         {/* Centered Menu */}
-        <div className="flex gap-6 sm:gap-12 text-2xl sm:text-3xl capitalize tracking-normal" style={{ color: '#8b0000', fontFamily: "'Delmon Delicate', 'Angella White', 'Playlist Script', cursive" }}>
+        <div className="flex items-center gap-6 sm:gap-12 text-2xl sm:text-3xl capitalize tracking-normal" style={{ color: '#8b0000', fontFamily: "'Delmon Delicate', 'Angella White', 'Playlist Script', cursive" }}>
           <button onClick={() => scrollTo('schedule')} className="hover:opacity-60 transition-opacity">Schedule</button>
+          
+          {/* Clinking Glasses */}
+          <div 
+            className="relative cursor-pointer mx-2 sm:mx-4" 
+            style={{ width: '45px', height: '65px', opacity: 0.8 }}
+            onMouseEnter={triggerClink}
+            onTouchStart={triggerClink}
+          >
+            <img
+              key={`left-${clinkKey}`}
+              src={glassesSketch}
+              alt="Decorative sketch left"
+              className="absolute w-full h-full glass-left object-contain"
+            />
+            <img
+              key={`right-${clinkKey}`}
+              src={glassesSketch}
+              alt="Decorative sketch right"
+              className="absolute w-full h-full glass-right object-contain"
+            />
+          </div>
+
           <button onClick={() => scrollTo('gifts')} className="hover:opacity-60 transition-opacity">Gifts</button>
         </div>
       </div>
