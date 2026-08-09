@@ -187,6 +187,15 @@ export default function HeroSection() {
                 RSVP until <span style={{ fontFamily: '"Playfair Display", serif' }}>1</span> September
               </a>
             </div>
+            
+            <div className="flex flex-col mt-4 gap-1 text-sm sm:text-base opacity-80" style={{ fontStyle: 'italic', fontWeight: 400 }}>
+              <span className="flex items-center justify-end gap-1">
+                * Parking available at the venue
+              </span>
+              <span className="flex items-center justify-end gap-1">
+                * Dress code: Smart Casual / Comfortable for dancing
+              </span>
+            </div>
           </div>
           <div
             key={`disco-${discoKey}`}
