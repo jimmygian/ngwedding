@@ -189,7 +189,7 @@ export default function HeroSection() {
         </div>
 
         {/* RSVP Link */}
-        <div className="w-full flex flex-col justify-center items-center mt-8 sm:mt-12 z-20 pb-16">
+        <div id="rsvp" className="w-full flex flex-col justify-center items-center mt-8 sm:mt-12 z-20 pb-16 pt-8">
           <div className="relative inline-block">
             <a
               href="#"
