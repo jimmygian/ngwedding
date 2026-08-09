@@ -81,8 +81,21 @@ export default function HeroSection() {
           </div>
         </div>
 
+        {/* Sticky Navigation Bar */}
+        <nav 
+          className="sticky top-0 z-50 w-full py-4 bg-[#fdfaf6]/90 backdrop-blur-md transition-all -mt-4 sm:-mt-8 mb-4 sm:mb-8"
+          style={{ fontFamily: '"Cormorant Garamond", serif' }}
+        >
+          <div className="flex justify-center items-center gap-6 sm:gap-12 text-lg sm:text-xl font-bold" style={{ color: '#8b0000' }}>
+            <button onClick={() => { const el = document.getElementById('schedule'); if(el) document.querySelector('.page').scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' })}} className="hover:opacity-60 transition-opacity">Schedule & Q&A</button>
+            <button onClick={() => { const el = document.getElementById('gifts'); if(el) document.querySelector('.page').scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' })}} className="hover:opacity-60 transition-opacity">Gifts</button>
+            <button onClick={() => { const el = document.getElementById('rsvp'); if(el) document.querySelector('.page').scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' })}} className="hover:opacity-60 transition-opacity">RSVP</button>
+          </div>
+        </nav>
+
         {/* Date and Event Details */}
-        <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 -mt-8 sm:-mt-16 opacity-90" style={{ zIndex: 10 }}>
+        <div id="schedule" className="w-full flex flex-col gap-12 sm:gap-20">
+          <div className="w-full flex flex-row justify-center items-center gap-3 sm:gap-6 opacity-90" style={{ zIndex: 10 }}>
           <div className="relative" style={{ width: 'fit-content' }}>
             <img
               src={tableImage}
@@ -208,6 +221,7 @@ export default function HeroSection() {
           </div>
         </div>
 
+      </div>
       </div>
     </section>
   )
