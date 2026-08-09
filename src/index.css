@@ -17,6 +17,28 @@
   animation: float-pulse 5s ease-in-out infinite;
 }
 
+@keyframes clink-left {
+  0%, 100% { transform: rotate(-5deg) translateX(-2px); }
+  50% { transform: rotate(8deg) translateX(4px); }
+}
+
+@keyframes clink-right {
+  0%, 100% { transform: rotate(5deg) translateX(2px); }
+  50% { transform: rotate(-8deg) translateX(-4px); }
+}
+
+.glass-left {
+  clip-path: inset(0 50% 0 0);
+  animation: clink-left 2s ease-in-out infinite;
+  transform-origin: bottom right;
+}
+
+.glass-right {
+  clip-path: inset(0 0 0 50%);
+  animation: clink-right 2s ease-in-out infinite;
+  transform-origin: bottom left;
+}
+
 @keyframes throwBouquet {
   0% {
     transform: translate(60vw, -80vh) rotate(360deg);
