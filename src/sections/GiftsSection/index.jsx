@@ -1,4 +1,5 @@
 import React from 'react'
+import giftSketch from '../../../assets/pics/gift_sketch.svg'
 
 export default function GiftsSection() {
   return (
@@ -7,7 +8,7 @@ export default function GiftsSection() {
       {/* Decorative Gift Sketch (Left) */}
       <div className="w-48 h-48 sm:w-64 sm:h-64 opacity-90 transition-transform duration-500 hover:scale-105 flex-shrink-0">
         <img 
-          src="/assets/pics/gift_sketch.svg" 
+          src={giftSketch} 
           alt="Gift Sketch" 
           className="w-full h-full object-contain"
         />
