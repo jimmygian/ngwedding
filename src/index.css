@@ -66,9 +66,9 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  background: rgba(255, 240, 160, 0.7);
+  background: rgba(255, 200, 100, 0.75);
   border-radius: 50%;
-  box-shadow: 0 0 10px 4px rgba(255, 230, 120, 0.4), 0 0 20px 8px rgba(255, 210, 80, 0.2);
+  box-shadow: 0 0 10px 4px rgba(255, 170, 70, 0.5), 0 0 20px 8px rgba(255, 130, 40, 0.3);
   filter: blur(1px);
   mix-blend-mode: screen;
 }

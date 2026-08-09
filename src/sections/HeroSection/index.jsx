@@ -4,19 +4,19 @@ import tableImage from '../../../assets/pics/table_sketch_vector.svg'
 import partyImage from '../../../assets/pics/party_sketch.png'
 
 const tableLights = [
-  { left: '15%', top: '35%', delay: '0s' },
-  { left: '21%', top: '34%', delay: '0.4s' },
-  { left: '27%', top: '36%', delay: '1.2s' },
-  { left: '33%', top: '36%', delay: '0.2s' },
-  { left: '39%', top: '37%', delay: '0.9s' },
-  { left: '45%', top: '38%', delay: '0.6s' },
+  { left: '25%', top: '35%', delay: '0s' },
+  { left: '29%', top: '34%', delay: '0.4s' },
+  { left: '33%', top: '36%', delay: '1.2s' },
+  { left: '37%', top: '36%', delay: '0.2s' },
+  { left: '42%', top: '37%', delay: '0.9s' },
+  { left: '46%', top: '38%', delay: '0.6s' },
   { left: '50%', top: '38%', delay: '1.5s' },
-  { left: '56%', top: '38%', delay: '0.1s' },
-  { left: '62%', top: '37%', delay: '0.8s' },
-  { left: '68%', top: '36%', delay: '1.3s' },
-  { left: '74%', top: '36%', delay: '0.5s' },
-  { left: '80%', top: '35%', delay: '1.1s' },
-  { left: '86%', top: '34%', delay: '0.3s' },
+  { left: '54%', top: '38%', delay: '0.1s' },
+  { left: '58%', top: '37%', delay: '0.8s' },
+  { left: '63%', top: '36%', delay: '1.3s' },
+  { left: '67%', top: '36%', delay: '0.5s' },
+  { left: '71%', top: '35%', delay: '1.1s' },
+  { left: '75%', top: '34%', delay: '0.3s' },
 ];
 
 export default function HeroSection() {
