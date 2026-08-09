@@ -193,7 +193,7 @@ export default function HeroSection() {
                 * Parking available at the venue
               </span>
               <span className="flex items-center justify-end gap-1">
-                * Dress code: Smart Casual / Comfortable for dancing
+                * Smart casual. Dancing shoes highly recommended!
               </span>
             </div>
           </div>
