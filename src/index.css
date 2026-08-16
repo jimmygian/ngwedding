@@ -41,14 +41,62 @@
 
 @keyframes hover-jiggle {
   0% { transform: rotate(0deg) scale(1); }
-  25% { transform: rotate(-5deg) scale(1.05); }
-  50% { transform: rotate(5deg) scale(1.05); }
-  75% { transform: rotate(-3deg) scale(1.02); }
+  25% { transform: rotate(-8deg) scale(1.08); }
+  50% { transform: rotate(8deg) scale(1.08); }
+  75% { transform: rotate(-4deg) scale(1.04); }
   100% { transform: rotate(0deg) scale(1); }
 }
 
 .animate-jiggle {
   animation: hover-jiggle 0.8s ease-out forwards;
+}
+
+@keyframes disco-idle {
+  0%, 100% {
+    transform: rotate(-3deg) scale(1);
+  }
+  50% {
+    transform: rotate(3deg) scale(1.03);
+  }
+}
+
+.animate-disco-idle {
+  animation: disco-idle 3.5s ease-in-out infinite;
+  transform-origin: 50% 10%;
+}
+
+@keyframes hero-float {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1.2deg);
+  }
+  75% {
+    transform: rotate(1.2deg);
+  }
+}
+
+.animate-hero-float {
+  animation: hero-float 5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes photo-idle {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-1.5deg) translateY(-3px);
+  }
+  75% {
+    transform: rotate(1.5deg) translateY(2px);
+  }
+}
+
+.animate-photo-idle {
+  animation: photo-idle 5.5s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
 @keyframes flicker {
@@ -156,6 +204,14 @@ body {
 }
 
 @font-face {
+  font-family: 'GFS Didot Display';
+  src: url('../assets/fonts/greek/GFS_Didot_Display.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Angella White';
   src: url('/assets/fonts/angella_white/angella_white.ttf') format('opentype');
   font-weight: 400;
@@ -248,7 +304,7 @@ body {
 .name {
   margin: 0;
   font-family: 'Delmon Delicate', 'Angella White', 'Playlist Script', cursive;
-  font-weight: 700;
+  font-weight: 400;
   font-size: min(clamp(24px, 5vw, 64px), 8vh);
   line-height: 0.82;
   color: #941830;

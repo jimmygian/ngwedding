@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import HeroSection from './sections/HeroSection'
-import GiftsSection from './sections/GiftsSection'
+import PhotosSection from './sections/PhotosSection'
 import NavBar from './components/NavBar'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -17,15 +18,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <LanguageProvider>
       <NavBar />
       <div className="mesh-bg" />
-      <div className="page" style={{ overflowY: 'auto', height: '100dvh' }}>
-        <div id="home">
-          <HeroSection />
-        </div>
-        <GiftsSection />
+      <div className="page" style={{ overflowY: 'auto', overflowX: 'hidden', height: '100dvh', width: '100%' }}>
+        <HeroSection />
+        <PhotosSection />
       </div>
-    </>
+    </LanguageProvider>
   )
 }
