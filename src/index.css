@@ -208,7 +208,7 @@ body {
   src: url('../assets/fonts/greek/GFS_Didot_Display.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -216,7 +216,7 @@ body {
   src: url('/assets/fonts/angella_white/angella_white.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -224,7 +224,7 @@ body {
   src: url('/assets/fonts/Carlinet.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -232,7 +232,7 @@ body {
   src: url('/assets/fonts/Delmon Delicate Script.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -242,7 +242,7 @@ body {
     url('/assets/fonts/greatlove/Greatlove.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -250,7 +250,7 @@ body {
   src: url('/assets/fonts/moranga/fonnts.com-moranga-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -258,7 +258,7 @@ body {
   src: url('/assets/fonts/Transcity.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -266,7 +266,7 @@ body {
   src: url('/assets/fonts/Courgette,Great_Vibes,Lavishly_Yours,Miss_Fajardose/Courgette/Courgette-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -274,7 +274,7 @@ body {
   src: url('/assets/fonts/Courgette,Great_Vibes,Lavishly_Yours,Miss_Fajardose/Miss_Fajardose/MissFajardose-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -282,7 +282,7 @@ body {
   src: url('/assets/fonts/Sisterhood PersonalUseOnly.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 .save-font {

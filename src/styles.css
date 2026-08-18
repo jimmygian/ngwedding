@@ -13,7 +13,7 @@
   src: url('/assets/angella_white/angella_white.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -21,7 +21,7 @@
   src: url('/assets/Carlinet.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -29,7 +29,7 @@
   src: url('/assets/Delmon Delicate Script.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -39,7 +39,7 @@
     url('/assets/greatlove/Greatlove.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -47,7 +47,7 @@
   src: url('/assets/moranga/fonnts.com-moranga-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 * {
