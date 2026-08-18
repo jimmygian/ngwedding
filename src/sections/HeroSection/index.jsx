@@ -159,7 +159,7 @@ export default function HeroSection() {
             </span>
             <span style={{ fontStyle: 'italic', fontWeight: 400, fontSize: 'clamp(1rem, 2.5vw, 1.3rem)' }}>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=SAKA+Psychiko" 
+                href="https://maps.app.goo.gl/bWtDoJuTfXYU6DJG8" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-center justify-end gap-1 hover:opacity-70 transition-opacity" 
