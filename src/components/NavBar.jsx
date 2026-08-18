@@ -49,12 +49,12 @@ export default function NavBar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-3 bg-[#fdfaf6]/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'}`}
       style={{ fontFamily: '"Moranga", "Cormorant Garamond", serif' }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-center items-center relative">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 flex justify-center items-center relative">
         {/* Centered Menu */}
-        <div className="flex items-center gap-6 sm:gap-12 text-2xl sm:text-3xl capitalize tracking-normal" style={{ color: '#8b0000', fontFamily: "'Delmon Delicate', 'Angella White', 'Playlist Script', cursive" }}>
+        <div className="flex items-center gap-3 sm:gap-12 text-xl sm:text-3xl capitalize tracking-normal" style={{ color: '#8b0000', fontFamily: "'Delmon Delicate', 'Angella White', 'Playlist Script', cursive" }}>
           <button onClick={() => scrollTo('schedule')} className="hover:opacity-60 transition-opacity flex items-center justify-center">
             {language === 'el' ? (
-              <img src={partyGreekImg} alt="Πάρτι" className="h-6 sm:h-8 object-contain" />
+              <img src={partyGreekImg} alt="Πάρτι" className="h-5 sm:h-8 object-contain" />
             ) : (
               t('nav', 'schedule')
             )}
@@ -62,8 +62,8 @@ export default function NavBar() {
           
           {/* Clinking Glasses */}
           <div 
-            className="relative cursor-pointer mx-2 sm:mx-4" 
-            style={{ width: '45px', height: '65px', opacity: 0.8, transform: 'scale(2)' }}
+            className="relative cursor-pointer mx-1 sm:mx-4 w-[34px] h-[50px] sm:w-[45px] sm:h-[65px] scale-[1.5] sm:scale-[2] flex-shrink-0" 
+            style={{ opacity: 0.8 }}
             onClick={() => {
               triggerClink();
               scrollTo('home');
@@ -90,7 +90,7 @@ export default function NavBar() {
 
           <button onClick={() => scrollTo('photos')} className="hover:opacity-60 transition-opacity flex items-center justify-center">
             {language === 'el' ? (
-              <img src={photosGreekImg} alt="Φωτογραφίες" className="h-7 sm:h-9 object-contain" />
+              <img src={photosGreekImg} alt="Φωτογραφίες" className="h-6 sm:h-9 object-contain" />
             ) : (
               t('nav', 'photos')
             )}
@@ -98,10 +98,10 @@ export default function NavBar() {
         </div>
 
         {/* Language Toggle */}
-        <div className="absolute right-6 flex items-center">
+        <div className="absolute right-3 sm:right-6 flex items-center">
           <button 
             onClick={toggleLanguage}
-            className="text-sm sm:text-base font-semibold tracking-widest text-[#8b0000] hover:opacity-60 transition-opacity border border-[#8b0000] rounded-full px-3 py-1"
+            className="text-xs sm:text-base font-semibold tracking-wider sm:tracking-widest text-[#8b0000] hover:opacity-60 transition-opacity border border-[#8b0000] rounded-full px-2.5 py-0.5 sm:px-3 sm:py-1"
             style={{ fontFamily: '"Cormorant Garamond", serif' }}
           >
             {language === 'en' ? 'ΕΛ' : 'EN'}
